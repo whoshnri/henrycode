@@ -1,0 +1,18 @@
+
+{
+   "age": 17,
+   "children": [
+      {
+         "age": 4,
+         "name": "Ade"
+      },
+      {
+         "age": 5,
+         "name": "Doreen"
+      }
+   ],
+   "firstname": "Henry",
+   "lastname": "Bassey",
+   "married": false,
+   "work": "Data Scientist"
+}
