@@ -2,6 +2,8 @@ import pandas as pd
 import string
 import random
 
+import csv
+
 
 class Cart:
     def __init__(self):
@@ -72,6 +74,36 @@ class Item:
         self.name = name
         self.qty = qty
 
+    #creating items from a csv file
+
+    @classmethod
+    def create_from_csv(cls , url): #this method will be a class method since it wont be containing the self parameter
+        with open(url) as file:
+            reader = csv.DictReader(file) #this converts the file into a dictionary
+            items = list(reader) #converts the dict into a list
+            # print(items)
+            
+            for item in items:
+                 it = Item(
+                    price=item.get('price'), name=item.get('name'),qty=item.get('quantity')
+                )
+                #  print(it.name + ',' + it.price + ',' + it.qty)
+
+    #static method
+    #this method will check if a number is an integer
+    #these methods dont use the self 
+    #this is an isolated function that doesnt communicate with the main class
+    @staticmethod
+    def is_integer(num):
+        if isinstance(num , float): #if the number is is a float then re
+            return num.is_integer()
+        elif num.isinstance(int):
+            return True
+        else:
+            return False
+
+
+                
 
 class Store():
     def __init__(self , name):
@@ -121,30 +153,71 @@ class Store():
         return code
     
     
-item1= Item(220, 'hh')
-item2= Item(200, 'DJD')
-item3= Item(300, 'DJDD')
-item4= Item(300, 'hh22')
-cart1= Cart()
-cart1.add_to_cart(item1)
-cart1.add_to_cart(item3)
-cart1.add_to_cart(item4)
-cart1.add_to_cart(item2)
-cart1.add_to_cart(item2)
+#inheritance
+class Phone(Item):
+    all = []
+    broken_ls = []
+    
+    def __init__(self, price, name, qty=1):
+        super().__init__(price, name, qty)
+        self.broken = False
+        self.all.append(f'{self.name}, {self.price}, {self.qty}')
+        
+
+    def Broken(self):
+        self.broken_ls.append(self.name)
+
+            
 
 
-cart1.show_cart()
-
-print(cart1.items)
-print(cart1.item_qty)
-print(cart1.price_list)
 
 
-amazon = Store("Amazon")
-amazon.create('DJD' , 200 , 1)
-amazon.create('DJD' , 500 , 3)
-amazon.create('D2D' , 400 , 2)
-print(amazon.item_list)
+# item1= Item(220, 'hh')
+# item2= Item(200, 'DJD')
+# item3= Item(300, 'DJDD')
+# item4= Item(300, 'hh22')
+# cart1= Cart()
+# cart1.add_to_cart(item1)
+# cart1.add_to_cart(item3)
+# cart1.add_to_cart(item4)
+# cart1.add_to_cart(item2)
+# cart1.add_to_cart(item2)
+
+
+# cart1.show_cart()
+
+# print(cart1.items)
+# print(cart1.item_qty)
+# print(cart1.price_list)
+
+
+# amazon = Store("Amazon")
+# amazon.create('DJD' , 200 , 1)
+# amazon.create('DJD' , 500 , 3)
+# amazon.create('D2D' , 400 , 2)
+# print(amazon.item_list)
+
+# Item.create_from_csv('oops\data.csv')
+
+
+# print(Item.is_integer(6.0))
+
+#inheritance --- creating subclasses with new but also former attributes
+# phone1 = Phone(400 , "henryPhone10" , 4)
+# phone2 = Phone(700 , "henryPhone20" , 2)
+
+# phone1.Broken()
+
+# print(Phone.all)
+# print(Phone.broken_ls)
+
+#abstraction
+#this is the processs of hiding unncessary items of a class from the users
+#these unnecessary functiions in the class are things like functions that are only useful when embedded in another function
+
+#--> abstraction is achieved by using double underscores befpre the name of the function (__name)
+
+####polymorphism
 
 
 
