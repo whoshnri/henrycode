@@ -1,0 +1,144 @@
+footer{
+    background-color: rgb(216, 209, 209);
+    display: flex;
+    justify-content: space-around;
+    margin: auto;
+    padding: 3rem;
+    margin-top: 4rem;
+    
+
+}
+
+
+.footer-logo{
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    font-size: xx-large;
+    color: rgb(130, 32, 132);
+    margin-top: .3rem;
+}
+
+.logo-span{
+    color: rgb(0, 0, 0);
+}
+
+.footer-links{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap : 1rem;
+    margin-right: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: small;
+}
+
+.footer-links button{
+    background-color: rgb(130, 32, 132);
+    padding: .3rem;
+    width: 3rem;
+    border-radius: .3rem;
+    border: none;
+    cursor: pointer;
+    color: white;
+}
+
+.footer-links button:hover{
+    background-color:transparent;
+    border : .1rem solid rgb(130, 32, 132);
+    padding: .2rem;
+    color: rgb(130, 32, 132);
+}
+
+.footer-link{
+    text-decoration: none;
+    color: black;
+    position: relative; 
+    font-weight: 700;
+    overflow: hidden;
+}
+
+.footer-link::after{
+    content: '';
+    position: absolute;
+    width: 103%;
+    height: .07rem;
+    bottom: 0;
+    left: -5rem;
+    visibility: hidden;
+    background: rgb(0, 0, 0);
+    transition: width 0.3s;
+}
+
+.footer-link:hover::after{
+    visibility: visible;
+    left: 0;
+    transition: .3s ease-in-out;
+}
+
+
+.copyright{
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    font-size: small;
+    color: rgb(130, 32, 132);
+    margin-top: 1rem;
+}
+
+
+.left{
+    display: block;
+}
+
+
+.get-in-touch h1{
+    margin-top: -.2rem;
+    font-size: x-large;
+
+}
+
+.input{
+
+    background-color: white;
+    width: fit-content;
+    padding: .6rem 3.4rem .6rem 1rem;
+    position: relative;
+    border-radius: 3rem;
+}
+
+
+.text{
+    border: none;
+    width: 90%;
+
+
+
+}
+
+.send{
+    background-color: transparent;
+    border: none;
+    color:  hsl(299, 61%, 30%);
+    padding: .4rem .6rem .4rem .6rem;
+    text-align: center;;
+    right:.4rem;
+    top: .25rem;
+    cursor: pointer;
+    border-radius: 1rem;
+    position: absolute;
+    border: 1px solid  hsl(299, 61%, 30%);
+}
+
+.send:hover{
+    background-color: transparent;
+    background-color: hsl(299, 61%, 30%);
+    color:  hsl(0, 0%, 100%);
+    transition: .2s ease-in-out;
+}
+
+.text:focus{
+    outline: none;
+    border: none;
+    color: rgb(130, 32, 132);
+}

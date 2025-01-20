@@ -1,0 +1,122 @@
+nav{
+    background-color: rgb(216, 209, 209);
+    display: flex;
+    justify-content: space-between;
+    max-width: 770px;
+    margin: auto;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    position: sticky;
+    top: 3px;
+    z-index: 10000;
+
+}
+
+
+.nav-logo{
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    color: rgb(130, 32, 132);
+    margin-top: .3rem;
+}
+
+.logo-span{
+    color: rgb(0, 0, 0);
+}
+
+.nav-links{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap : 1rem;
+    margin-right: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: small;
+}
+
+.nav-links button{
+    background-color: rgb(130, 32, 132);
+    padding: .3rem;
+    width: 3rem;
+    border-radius: .3rem;
+    border: none;
+    cursor: pointer;
+    color: white;
+}
+
+.nav-links button:hover{
+    background-color:transparent;
+    border : .1rem solid rgb(130, 32, 132);
+    padding: .238rem;
+    color: rgb(130, 32, 132);
+}
+
+.nav-link{
+    text-decoration: none;
+    color: black;
+    position: relative; 
+    font-weight: 700;
+    overflow: hidden;
+}
+
+.nav-link::after{
+    content: '';
+    position: absolute;
+    width: 103%;
+    height: .07rem;
+    bottom: 0;
+    left: -5rem;
+    visibility: hidden;
+    background: rgb(0, 0, 0);
+    transition: width 0.3s;
+}
+
+.nav-link:hover::after{
+    visibility: visible;
+    left: 0;
+    transition: .3s ease-in-out;
+}
+
+.search{
+    display: flex;
+    align-items: center;
+    height: fit-content;
+    overflow: hidden;
+    position: relative;
+    border-radius: .1rem;
+}
+
+
+.search input{
+    padding: .3rem;
+    border: none;
+    width: 15rem;
+    background-color: hsl(0, 8%, 70%);
+}
+
+.search input:focus{
+    outline: none;
+    color: rgb(130, 32, 132);
+}
+
+.search input:hover{
+    background-color: hsl(0, 8%, 60%) ;
+}
+
+.search button{
+    border: none;
+    height: 100%;
+    cursor: pointer;
+    color: white;
+    font-size: x-small;
+    right: 0;
+    position: absolute;
+    background-color: hsl(299, 61%, 30%);
+}
+
+.search button:hover{
+    background-color: hsl(299, 61%, 60%); ;
+}
+
+

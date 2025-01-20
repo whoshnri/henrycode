@@ -1,0 +1,378 @@
+
+.card{
+    width: 13rem;
+    height: 270px;
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    justify-content: space-between;
+}
+
+
+.card-img{
+    overflow: hidden;
+    width: 100%;
+    height: 70%;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 0;
+    object-fit: fill;
+    margin: auto;
+    position: absolute;
+    border-radius: 14px;
+}
+
+.item-img{
+    width: 100%;
+    top: -1rem;
+    right: 0;
+    left: 0;
+    z-index: 0;
+    object-fit: fill;
+    margin: auto;
+    position: absolute;
+    border-radius: 14px;
+    cursor: pointer;
+
+
+
+}
+
+.item-img:hover{
+    animation-name: zoom;
+    animation-duration: .5s;
+    animation-iteration-count: 1;
+}
+
+@keyframes zoom{
+    50%{
+        transform: scale(1.7);
+    }
+}
+
+
+.price{
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+
+}
+
+.buy{
+    background-color:hsl(299, 61%, 40%);
+    width: fit-content;
+    padding: .5rem 1.4rem;
+    border: none;
+    bottom: 0rem;
+    left: 0;
+    position: absolute;
+    cursor: pointer;
+    border-radius: 14px;
+
+}
+
+.buy:hover{
+    background-color: white;
+    color:hsl(299, 61%, 40%);
+    border: 1px solid hsl(299, 61%, 40%);
+    transition: .1s ease-in-out;
+}
+
+
+
+.add-to-cart{
+    background-color: black;
+    width: fit-content;
+    color: white;
+    cursor: pointer;
+    padding: .5rem 1.1rem;
+    border : none;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    border-radius: 14px;
+}
+
+.add-to-cart:hover{
+    background-color: white;
+    color:hsl(299, 61%, 40%);
+    border: 1px solid hsl(299, 61%, 40%);
+    transition: .1s ease-in-out;
+}
+
+.item-details{
+    width: fit-content;
+    color: rgb(0, 0, 0);
+    padding: .5rem 1.2rem;
+    border : none;
+    position: absolute;
+    bottom: 1.1rem;
+    left: -.7rem;
+    font-size:large;
+    font-weight: 600;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.item-price{
+    background-color: hsl(299, 61%, 40%);
+    opacity: 60%;
+    width:4rem;
+    color: transparent;
+    padding: .3rem .45rem;
+    border : none;
+    position: absolute;
+    top: 1rem;
+    color: white;
+    font-weight: 600;
+}   
+
+.tag{
+    opacity: 1;
+    width: fit-content;
+    border : none;
+    border-radius: 0 10px 10px 0;
+    position: absolute;
+    left:3.6rem;
+    top: .7rem;
+    transform: rotate(135deg);
+}
+
+
+.card-details{
+    position: fixed;
+    width: 70%;
+    overflow: hidden;
+    height: 75vh;
+    visibility: hidden;
+    z-index: 100;
+    background-color: wheat;
+    top: 5rem;
+    border-radius: 1rem 1rem 1rem 1rem;
+    left: 15%;
+    display: flex;
+    background-color: #2f2f2f;
+   
+}
+
+.close{
+    position: absolute;
+    right:-.7rem;
+    top: -.3rem;
+    width: fit-content;
+    background-color: transparent;
+    cursor: pointer;
+    visibility: none;
+}
+
+.close-svg{
+    cursor: pointer;
+    border-radius: 50%;
+    padding: 0 .4rem;
+}
+
+.close:hover .close-svg{
+    background-color: hsl(299, 61%, 50%);
+}
+
+
+
+.card-details img{
+    width: 60%;
+    object-fit: fill;
+
+}
+
+.details-details{
+    width: 35%;
+    margin: auto;
+    height: 90%;
+    position: relative;
+}
+
+.button-grp{
+    position: absolute;
+    display: inline-block;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    font-weight: 800;
+}
+
+.details-add-to-cart:hover{
+    background-color: white;
+    color: hsl(299, 61%, 40%);
+}
+
+.details-add-to-cart{
+    width: 100%;
+    margin-top: .3rem;
+    padding:.5rem;
+    border: 1px solid hsl(299, 61%, 40%);
+    background-color: hsl(299, 61%, 40%);
+    color: white;
+    border-radius: 1rem;
+    cursor: pointer;
+}
+
+.details-buy:hover{
+    background-color: white;
+    color: black;
+}
+
+.details-buy{
+    width: 100%;
+    cursor: pointer;
+    color: white;
+    margin-top: 2rem;
+    padding:.5rem;
+    background-color: transparent;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 1rem;
+}
+
+
+.details-head{
+    text-align: left;
+    line-height: .6rem;
+    display: block;
+    color: white;
+}
+
+.details-head h2{
+    margin-bottom: 1rem;
+}
+
+.details-head p{
+    font-size: small;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: smaller;
+
+}
+
+.details-price{
+    font-size: xx-large;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    font-weight: 600;
+    color: hsl(299, 61%, 50%);
+}
+
+.specs{
+    text-align: left;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: small;
+    margin-top: 1rem;
+    width: 70%;
+    opacity: 70%;
+    margin-bottom: .5rem;
+}
+
+.mid{
+    display: flex;
+    width: fit-content;
+    padding: 1rem 0 1rem 0;
+    margin-top: 2rem;
+    gap:1rem;
+
+}
+
+.quantity{
+    display: flex;
+    background-color: hsl(299, 61%, 40%);
+    width: fit-content;
+    padding:.4rem 1rem ;
+    border-radius: 1.2rem;
+    color: white;
+    gap: .8rem;
+    position: relative;
+}
+
+.quantity::before{
+    content: 'Quantity';
+    position: absolute;
+    top:-1rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size:.7rem;
+    font-weight: 800;
+    opacity: 70%;
+
+}
+
+.quantity input{
+    width: 3rem;
+    text-align: center;
+    border: none;
+    color: white;
+    background-color: transparent;
+}
+
+.plus{
+    cursor: pointer;
+    right: 0;
+    border: none;
+    background-color: hsl(299, 61%, 40%);
+    border-radius: 0 1rem 1rem 0;
+    padding-top: .3rem ;
+    align-items: center;
+    top: 0;
+    bottom: 0;
+    left: 70%;
+    position: absolute;
+}
+
+.minus{
+    cursor: pointer;
+    left: 0;
+    border: none;
+    background-color: hsl(299, 61%, 40%);
+    border-radius: 1rem 0 0 1rem;
+    padding-top: .3rem ;
+    align-items: center;
+    top: 0;
+    bottom: 0;
+    right: 70%;
+    position: absolute;
+}
+
+
+.minus:hover{
+    background-color: hsl(299, 61%, 20%);
+    color: #2f2f2f;
+}
+
+.plus:hover{
+    background-color: hsl(299, 61%, 20%);
+    color: #2f2f2f;
+}
+
+
+.total{
+    background-color: hsl(299, 61%, 40%);
+    width: fit-content;
+    padding:.4rem 1rem ;
+    border-radius: 1rem;
+    color: white;
+    gap: .8rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    position: relative;
+
+}
+
+.total::before{
+    content: 'Total';
+    position: absolute;
+    top:-1rem;
+    right: 2rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size:.7rem;
+    font-weight: 800;
+    opacity: 70%;
+
+}
+
+
